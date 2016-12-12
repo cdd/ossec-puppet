@@ -18,6 +18,8 @@ class ossec::params {
       $processlist_owner = 'root'
       $processlist_group = 'ossec'
 
+      $ossec_scanpaths = [ {'path' => '/etc,/usr/bin,/usr/sbin', 'report_changes' => 'no', 'realtime' => 'no'}, {'path' => '/bin,/sbin', 'report_changes' => 'yes', 'realtime' => 'yes'} ]
+
       case $::osfamily {
         'Debian': {
 
